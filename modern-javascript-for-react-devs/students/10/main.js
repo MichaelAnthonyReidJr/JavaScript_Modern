@@ -47,7 +47,12 @@ const ex6 = () =>
     //let array = ['this', 'that', 'then', 'test', 'jarhead', 'tommorrow'];
     console.log(longestString(array));
 }
-
+const ex7 = () =>
+{
+    let n = [1, 3, 6, 3, 6, 10];
+    //let n = [ 225, 45, 78, 9, 100];
+    console.log(sort(n));
+}
 
 
 
@@ -145,7 +150,22 @@ const longestString = (passedArrayOfStrings) =>
     }
     return longestStringInArray;
 }
-
+const sort = (passedArray) =>
+{
+for (let i = 0; i < passedArray.length; i++)
+{
+    for(let j = 0; j < passedArray.length - i - 1; j++)
+    {
+        if (passedArray[j] >= passedArray[j+1])
+        {
+            let tempMaxLocation = passedArray[j];
+            passedArray[j] = passedArray[j+1];
+            passedArray[j+1] = tempMaxLocation;
+        }
+    }
+    return passedArray;
+}
+}
 
 
 const countNumbers = (array) => 
@@ -168,7 +188,7 @@ const countNumbers = (array) =>
     return retval;
 }
 const main = async () => {
-    ex6();
+    ex7();
 }
 
 main();
