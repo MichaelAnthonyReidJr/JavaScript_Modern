@@ -64,7 +64,11 @@ const ex9 = () =>
     var a = "this counts the number of words that end in s"
     console.log(countS(a));
 }
-
+const ex10 = () =>
+{
+    var array = ["this", "is", "a", "test"];
+    console.log(countLetters(array))
+}
 
 
 //Functions
@@ -225,16 +229,18 @@ const countS = (passedString) =>
     }
     return countWordsEndinginS;
 }
-
-
-
-
-
-
-
-
+const countLetters = (passedArray) =>
+{
+    let numberOfLetters = 0;
+    for (let i = 0; i < passedArray.length; i++)
+    {
+    numberOfLetters = passedArray[i].length
+    //console.log(numberOfLetters)
+    }
+return numberOfLetters;
+}
 const main = async () => {
-    ex9();
+    ex10();
 }
 
 main();
