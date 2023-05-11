@@ -2,6 +2,8 @@
 // File: main.js
 // Date: 5/24/2022
 // 
+
+//Main
 const ex1 = () =>
 {
     const array = [10, 20, 40,'65','tests', 5.9, 19];
@@ -39,12 +41,19 @@ const ex5 = () =>
     let returnedBackFromFunction = theNumberOfTimes(str, word);
     console.log(word + " appears: " + returnedBackFromFunction + " times.");
 }
+const ex6 = () =>
+{
+    let array = ['this', 'is', 'a', 'test', 'happy'];
+    //let array = ['this', 'that', 'then', 'test', 'jarhead', 'tommorrow'];
+    console.log(longestString(array));
+}
 
 
 
 
 
 
+//Functions
 
 
 const minNumber = (array) => 
@@ -117,11 +126,26 @@ while (i < taKeOutWhiteSpaces.length)
 }
 //console.log(countWord)
 return countWord
-
-
 }
 
- //Your functions here...
+
+const longestString = (passedArrayOfStrings) =>
+{
+    let longestStringInArray = '';
+    let howLongIsString = passedArrayOfStrings[0].length;
+    for (let i = 1; i<passedArrayOfStrings.length; i++)
+    {
+        if (passedArrayOfStrings[i].length > howLongIsString)
+        {
+        howLongIsString = passedArrayOfStrings[i].length;
+            longestStringInArray = passedArrayOfStrings[i];
+        }
+        else
+            continue;    
+    }
+    return longestStringInArray;
+}
+
 
 
 const countNumbers = (array) => 
@@ -144,7 +168,7 @@ const countNumbers = (array) =>
     return retval;
 }
 const main = async () => {
-    ex5();
+    ex6();
 }
 
 main();
