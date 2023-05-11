@@ -53,7 +53,12 @@ const ex7 = () =>
     //let n = [ 225, 45, 78, 9, 100];
     console.log(sort(n));
 }
-
+const ex8 = () =>
+{
+    //let words = "Valerie is my partner, not really"
+    let words = "Count the words in this string";
+    console.log(countWords(words));
+}
 
 
 
@@ -166,6 +171,14 @@ for (let i = 0; i < passedArray.length; i++)
     return passedArray;
 }
 }
+const countWords = (passedString) =>
+{
+    let passedStringArray = passedString.split(' ');
+    //console.log(passedStringArray, passedString);
+
+    let countWord = passedStringArray.length;
+    return countWord;
+}
 
 
 const countNumbers = (array) => 
@@ -188,7 +201,7 @@ const countNumbers = (array) =>
     return retval;
 }
 const main = async () => {
-    ex7();
+    ex8();
 }
 
 main();
